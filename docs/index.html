@@ -1,94 +1,106 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Smile Symmetry Trainer — Privacy Policy</title>
-  <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fafafa;color:#0a0a0a}
-    .container{max-width:860px;margin:0 auto;padding:40px}
-    .card{background:#fff;border:1px solid #eee;border-radius:12px;box-shadow:0 2px 14px rgba(0,0,0,.04);padding:28px}
-    h1{margin:0 0 8px;font-size:28px}
-    h2{margin-top:28px;margin-bottom:8px;font-size:20px}
-    p,li{line-height:1.55}
-    ul{padding-left:20px}
-    .muted{color:#6b7280}
-    a{color:#2563eb;text-decoration:none}
-    .grid{display:grid;gap:8px}
-    .note{background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:12px}
-    .small{font-size:13px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smile Symmetry Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Smile Symmetry iOS app. Last updated 23 September 2026.">
+<style>
+:root{--bg:#fafaf9;--fg:#1c1917;--muted:#57534e;--line:#e7e5e4;--card:#fff;--accent:#0f766e}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1917;--fg:#f5f5f4;--muted:#a8a29e;--line:#44403c;--card:#292524;--accent:#5eead4}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:1.9rem;line-height:1.2;margin:0 0 4px}
+h2{font-size:1.2rem;margin:2em 0 .5em;padding-top:1em;border-top:1px solid var(--line)}
+h3{font-size:1rem;margin:1.2em 0 .3em}
+a{color:var(--accent)}
+.meta{color:var(--muted);margin:0 0 20px}
+.summary{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.93rem;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+th{font-weight:600}
+footer{margin-top:40px;color:var(--muted);font-size:.9rem}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <header>
-        <h1>Privacy Policy</h1>
-        <p class="muted">For Smile Symmetry Trainer</p>
-        <p class="muted small">Effective date: 2025-08-27</p>
-      </header>
+<main>
+<h1>Smile Symmetry Privacy Policy</h1>
+<p class="meta">Last updated: 23 September 2026 · <a href="https://sebastiandoyle.github.io/app-terms/">Terms of Use</a> · <a href="https://sebastiandoyle.github.io/smile-symmetry-support/">Support</a></p>
 
-      <section>
-        <h2>Summary</h2>
-        <ul class="grid">
-          <li><strong>No data collection:</strong> The app does not collect, store, or transmit personal data.</li>
-          <li><strong>On‑device processing:</strong> Smile symmetry is computed locally using Apple ARKit/TrueDepth blend shapes.</li>
-          <li><strong>Camera access:</strong> The front camera is used only while the training view is visible.</li>
-          <li><strong>No third‑party analytics or ads:</strong> None are integrated.</li>
-        </ul>
-      </section>
+<div class="summary"><p><strong>In short:</strong> Smile Symmetry uses your front camera to measure how evenly you smile, live, entirely on your iPhone. Camera frames and face measurements are processed in memory and never stored, sent to us or shared. Only your best score and, if you save one, a smile snapshot of three numbers are kept on the device. Purchases go through Apple. There are no third-party SDKs, analytics, ads or accounts.</p></div>
 
-      <section>
-        <h2>TrueDepth and Face Data</h2>
-        <p>This app uses Apple’s ARKit face tracking on devices with a TrueDepth (Face ID) camera to provide real‑time smile symmetry feedback.</p>
-        <h3>What we collect via TrueDepth</h3>
-        <ul>
-          <li>ARKit <em>blend shape coefficients</em> such as <code>mouthSmileLeft</code>, <code>mouthSmileRight</code>, and related metrics (e.g., jaw open, mouth pucker).</li>
-          <li>These are numeric values provided by ARKit per frame and are processed in memory only.</li>
-          <li><strong>We do not capture or store images, video, depth maps, point clouds, or any biometric templates.</strong></li>
-        </ul>
-        <h3>Purpose of use</h3>
-        <ul>
-          <li>To compute a <strong>live symmetry score</strong> and drive on‑screen visual feedback and haptics during training.</li>
-          <li>No other use is made of the coefficients; they are not used for identification, authentication, or profiling.</li>
-        </ul>
-        <h3>Sharing and disclosure</h3>
-        <ul>
-          <li><strong>No sharing:</strong> Data derived from TrueDepth/ARKit is not shared with any third parties.</li>
-          <li><strong>No transmission:</strong> Data does not leave the device and is not sent to servers.</li>
-        </ul>
-        <h3>Storage and retention</h3>
-        <ul>
-          <li><strong>No retention:</strong> TrueDepth/ARKit coefficients are processed ephemerally in memory and are not stored.</li>
-          <li>The app stores a simple <em>best symmetry score</em> value locally using iOS UserDefaults; this value is not linked to identities and contains no biometric data.</li>
-        </ul>
-        <div class="note small">
-          <p><strong>Important:</strong> The app does not create or store any representation of your face. All processing occurs on‑device, and if the device lacks a supported TrueDepth camera, the app shows an unsupported screen.</p>
-        </div>
-      </section>
+<h2>1. Who is responsible for your data</h2>
+<p>Smile Symmetry is published by <strong>Sebastian Doyle</strong>, an individual developer. For the UK GDPR and the EU GDPR,
+Sebastian Doyle is the data controller. For the Australian Privacy Act 1988 (Cth), Sebastian Doyle is the entity that handles
+your personal information in line with the Australian Privacy Principles (APPs).</p>
+<p>Contact: <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a></p>
 
-      <section>
-        <h2>Data we do not collect</h2>
-        <p>We do not collect names, photos, videos, biometric identifiers, usage analytics, device identifiers, or precise location.</p>
-      </section>
+<h2>2. Data processed only on your device</h2>
+<p>This data is created and used inside the app on your iPhone or iPad. We never receive it.</p>
+<div class="tbl"><table><thead><tr><th>Data</th><th>Why</th><th>Lawful basis</th></tr></thead>
+<tbody><tr><td>Live front-camera frames</td><td>Detecting your face so the app can measure your smile. Processed frame by frame in memory; never recorded, stored or uploaded.</td><td>Consent (Art. 6(1)(a)): you grant the iOS permission and can withdraw it in Settings</td></tr><tr><td>Face measurements: ARKit face-tracking values from the TrueDepth camera (e.g. mouthSmileLeft, mouthSmileRight, jaw open) or, on other devices, Apple Vision lip landmark points</td><td>Calculating the live left/right smile symmetry score, visual feedback and haptics. Held in memory only and discarded; no face image, depth map, face mesh or face template is stored.</td><td>Consent (Art. 6(1)(a)): you grant the iOS permission and can withdraw it in Settings</td></tr><tr><td>Best symmetry score and an optional saved smile snapshot (left value, right value, symmetry score and date)</td><td>Showing your best result and your saved smile</td><td>None needed: we never receive it</td></tr><tr><td>Onboarding flag and cached Premium status</td><td>Remembering settings and unlocking Premium</td><td>None needed: we never receive it</td></tr></tbody></table></div>
 
-      <section>
-        <h2>Children</h2>
-        <p>The app is suitable for general audiences and does not contain content targeted specifically at children.</p>
-      </section>
+<h2>3. Data that leaves your device</h2>
+<div class="tbl"><table><thead><tr><th>Data</th><th>Sent to</th><th>Why</th><th>Lawful basis</th></tr></thead>
+<tbody><tr><td>Purchase and restore requests</td><td>Apple (StoreKit / App Store)</td><td>Taking payment and restoring Premium</td><td>Contract (Art. 6(1)(b)): needed to provide what you bought</td></tr></tbody></table></div>
 
-      <section>
-        <h2>Contact</h2>
-        <p>Questions? Email <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a>.</p>
-      </section>
+<h2>4. Who receives data (processors and Apple)</h2>
+<ul>
+<li><strong>Apple</strong> (US and worldwide): distributes the app and runs the App Store, and handles payment for any
+purchase. Apple is an independent controller of your Apple Account and payment data; we never see your name, email or
+card details. If you opt in to <em>Share with App Developers</em> in iOS Settings, Apple may give us anonymous crash
+reports and usage statistics. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</li>
+</ul>
 
-      <section>
-        <h2>Changes</h2>
-        <p>We may update this policy. Material changes will be reflected on this page with an updated effective date.</p>
-      </section>
+<h2>5. What we do not do</h2>
+<ul><li>We do not store or upload photos, video, depth data or any representation of your face.</li><li>We do not use face data to identify or verify you, and we do not create face templates.</li><li>We do not run advertising or ad networks.</li><li>We do not track you across other companies&#x27; apps or websites.</li><li>We do not sell or rent personal information.</li><li>We do not use analytics or any third-party SDK.</li><li>We do not ask you to create an account.</li></ul>
 
-      <footer class="muted small">© Smile Symmetry Trainer</footer>
-    </div>
-  </div>
+<h2>6. Permissions and consent</h2>
+<ul><li><strong>Camera</strong>: to see your face and measure your smile in real time. Nothing is recorded or uploaded.</li></ul>
+<p>You can withdraw a permission at any time in iOS Settings &gt; Smile Symmetry. The feature that needs it will stop working; the rest of the app will keep working.</p>
+
+<h2>7. Lawful bases (UK and EU GDPR)</h2>
+<ul>
+<li><strong>Contract</strong>: processing a purchase and restoring it, so you get what you paid for.</li><li><strong>Legitimate interests</strong>: validating receipts and preventing fraud or abuse of purchases. You can object (see section 10).</li><li><strong>Consent</strong>: access to device features such as the camera, microphone, location, photos, motion or notifications, given through the iOS permission prompt.</li>
+</ul>
+
+<h2>8. How long data is kept</h2>
+<p>Data on your device stays there until you delete it in the app or delete the app. If your device backs up to iCloud,
+the app's data may be in that backup, under Apple's control and your iCloud settings.</p>
+
+<h2>9. International transfers</h2>
+<p>We do not transfer your personal data anywhere, because we do not receive it.</p><p>Apple may process data in the United States and other countries under its own privacy policy and its transfer safeguards.</p>
+
+<h2>10. Your rights (UK and EU/EEA)</h2>
+<p>You have the right to access your personal data, to have it corrected or erased, to restrict or object to processing,
+to data portability, and to withdraw consent at any time (without affecting processing before you withdrew it). To use
+any of these rights, email <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a>. We will reply within one month. Because we hold little
+or no data that identifies you, we may need you to give us an identifier shown in the app.</p>
+<p>You can complain to the UK Information Commissioner's Office (<a href="https://ico.org.uk/make-a-complaint/">ico.org.uk</a>)
+or to the data protection supervisory authority in the EU/EEA country where you live or work
+(<a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en">list of EU authorities</a>). We would appreciate the chance to fix it first.</p>
+
+<h2>11. Australian users</h2>
+<p>Under the Australian Privacy Principles you can ask to access or correct the personal information we hold about you,
+and you can use the app anonymously (no account or name is needed). Email us with any request or complaint; we will
+respond within 30 days. If you are not satisfied, you can complain to the Office of the Australian Information
+Commissioner (<a href="https://www.oaic.gov.au/privacy/privacy-complaints">oaic.gov.au</a>).</p>
+
+<h2>12. Children</h2>
+<p>Smile Symmetry is rated 4+ and is suitable for general audiences, but it is not directed at children. It does not collect personal information from anyone, including children: camera frames and face measurements stay in memory on the device. Purchases are made through the Apple Account holder, who can use Apple's parental controls (Ask to Buy, Screen Time).</p>
+
+<h2>13. Security</h2>
+<p>On-device data is protected by iOS data protection and your device passcode. Data sent to processors travels over encrypted (HTTPS/TLS) connections.</p>
+<h2>Face data and biometrics</h2><p><strong>Where it goes:</strong> nowhere. Face data (camera frames, ARKit face-tracking values and Vision landmark points) is processed only on your device, in memory, while the training screen is open. It is never written to storage, never sent to us, Apple or any third party, and is discarded frame by frame. The only thing kept is a score of three numbers (left, right, symmetry) and a date.</p><p><strong>Is it biometric or special-category data?</strong> Under the UK and EU GDPR, facial data is special-category &ldquo;biometric data&rdquo; only when it is processed to uniquely identify a person (Article 9). Smile Symmetry never uses face data to identify or verify anyone, creates no face template, and we never receive it, so we do not process special-category biometric data. Under the Australian Privacy Act, biometric information is sensitive information when used for automated verification or identification, or as a biometric template; the app does neither. The data is still personal information about your face, so we treat it with the same care: on-device only, used only for your live score, and only with your camera permission.</p><p>Apple's ARKit face tracking does not give apps your Face ID data, and the app does not access Face ID.</p>
+<h2>14. Changes to this policy</h2>
+<p>If we change this policy we will update this page and the date at the top. If a change is significant, we will say so in the app or in the App Store release notes.</p>
+
+<h2>15. Contact</h2>
+<p>Sebastian Doyle · <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a> · <a href="https://sebastiandoyle.github.io/app-terms/">Terms of Use</a></p>
+
+<footer>© 2026 Sebastian Doyle</footer>
+</main>
 </body>
 </html>
